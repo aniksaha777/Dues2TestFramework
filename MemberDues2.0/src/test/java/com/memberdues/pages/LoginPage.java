@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.memberdues.utility.Helper;
+
 public class LoginPage {
 
 	WebDriver driver;
@@ -34,10 +36,13 @@ public class LoginPage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		Helper.highlightElement(driver, username);
 		username.sendKeys(userid);
+		Helper.highlightElement(driver, pwd);
 		pwd.sendKeys(pw);
+		Helper.highlightElement(driver, token);
 		token.sendKeys(xt);
+		Helper.highlightElement(driver, LoginButton);
 		LoginButton.click();
 
 	}

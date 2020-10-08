@@ -5,9 +5,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 
 public class Helper {
@@ -29,6 +31,20 @@ public class Helper {
 		}
 		
 		return ScreenshotPath;
+	}
+	
+	public static void highlightElement(WebDriver driver, WebElement ele) {
+		
+		JavascriptExecutor js=(JavascriptExecutor)driver;  
+		js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red;');", ele);
+		try {
+			Thread.sleep(1000);
+		} 
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		} 
+		js.executeScript("arguments[0].style.border=''", ele);
+		
 	}
 	public void handleFrames()
 	{

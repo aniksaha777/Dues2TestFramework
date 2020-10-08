@@ -7,7 +7,9 @@
         <methods>
           <include name="loginMember"/>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="tearDownMethod"/>
         </methods>
       </class> <!-- com.memberdues.testcases.LoginTests -->
     </classes>

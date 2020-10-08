@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22312" started-at="2020-10-04T15:22:54 IST" finished-at="2020-10-04T15:23:17 IST">
+  <suite name="Suite" duration-ms="28278" started-at="2020-10-05T23:30:58 IST" finished-at="2020-10-05T23:31:26 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="22312" started-at="2020-10-04T15:22:54 IST" finished-at="2020-10-04T15:23:17 IST">
+    <test name="Test" duration-ms="28278" started-at="2020-10-05T23:30:58 IST" finished-at="2020-10-05T23:31:26 IST">
       <class name="com.memberdues.testcases.LoginTests">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setupSuite" is-config="true" duration-ms="806" started-at="2020-10-04T15:22:54 IST" finished-at="2020-10-04T15:22:54 IST">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setupSuite" is-config="true" duration-ms="766" started-at="2020-10-05T23:30:57 IST" finished-at="2020-10-05T23:30:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setup" is-config="true" duration-ms="11489" started-at="2020-10-04T15:22:54 IST" finished-at="2020-10-04T15:23:06 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setup" is-config="true" duration-ms="16563" started-at="2020-10-05T23:30:58 IST" finished-at="2020-10-05T23:31:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginMember()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="loginMember" duration-ms="9246" started-at="2020-10-04T15:23:06 IST" finished-at="2020-10-04T15:23:15 IST">
+        <test-method status="PASS" signature="loginMember()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="loginMember" duration-ms="9718" started-at="2020-10-05T23:31:14 IST" finished-at="2020-10-05T23:31:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginMember -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDownMethod" is-config="true" duration-ms="736" started-at="2020-10-04T15:23:15 IST" finished-at="2020-10-04T15:23:16 IST">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDownMethod" is-config="true" duration-ms="976" started-at="2020-10-05T23:31:24 IST" finished-at="2020-10-05T23:31:25 IST">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDown" is-config="true" duration-ms="796" started-at="2020-10-04T15:23:16 IST" finished-at="2020-10-04T15:23:17 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDown" is-config="true" duration-ms="976" started-at="2020-10-05T23:31:25 IST" finished-at="2020-10-05T23:31:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
