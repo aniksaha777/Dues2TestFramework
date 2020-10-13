@@ -46,6 +46,12 @@ public class BrowserFactory {
 		
 
 	}
+	
+	public static void CloseBrowser(WebDriver driver) {
+		driver.close();
+		
+
+	}
 
 
 

@@ -16,14 +16,18 @@ public class Helper {
 	
 	//Helps to handle Frames, Alerts, Multiple Windows, takes Screenshot, Hightlight Element,Sync Issues,javascriptexecutor
 	
-	public static String captureScreenshot(WebDriver driver)
+	public static String captureScreenshot(WebDriver driver,String tcname)
 	{
+		String Foldername = tcname;
+		String folderpath = System.getProperty("user.dir")+"/Screenshots/TestExecutionDate_"+getCurrentDate()+"/"+Foldername;
+		File file = new File(folderpath);
+		file.mkdirs();
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String ScreenshotPath = System.getProperty("user.dir")+"/Screenshots/"+getCurrentDateTime()+".jpeg";
+		String ScreenshotPath = folderpath+"/"+getCurrentDateTime()+".jpeg";
 		
 		try {
 			FileHandler.copy(src, new File(ScreenshotPath));
-			System.out.println("Screenshot Captured");
+			//System.out.println("Screenshot Captured");
 		} catch (Exception e) {
 			
 			System.out.println("Unable to Capture Screenshot"+e.getMessage());
@@ -39,7 +43,7 @@ public class Helper {
 		js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red;');", ele);
 		try {
 			Thread.sleep(1000);
-		} 
+		} 	
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		} 
@@ -56,7 +60,14 @@ public class Helper {
 	}
 	public static String getCurrentDateTime()
 	{
-		DateFormat customFormat = new SimpleDateFormat("MMddyyyy_HH_mm_ss");
+		DateFormat customFormat = new SimpleDateFormat("MMddyyyy_HHmmss");
+		Date currentDate = new Date();
+		return customFormat.format(currentDate);
+	}
+	
+	public static String getCurrentDate()
+	{
+		DateFormat customFormat = new SimpleDateFormat("MMddyyyy");
 		Date currentDate = new Date();
 		return customFormat.format(currentDate);
 	}

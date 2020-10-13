@@ -5,9 +5,11 @@
     <classes>
       <class name="com.memberdues.testcases.LoginTests">
         <methods>
-          <include name="loginMember"/>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="tearDownMethod"/>
+          <include name="First_Time_Reset_Password"/>
         </methods>
       </class> <!-- com.memberdues.testcases.LoginTests -->
     </classes>

@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -41,7 +42,7 @@ public class BaseClass {
 
 	}
 
-	@BeforeClass
+	@BeforeMethod
 	public void setup() {
 
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(),config.getTestURL());
@@ -55,15 +56,16 @@ public class BaseClass {
 	}
 	@AfterMethod
 	public void tearDownMethod(ITestResult result) throws IOException {
-
+		
+		
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
-			logger.fail("Test Case Failed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.fail("Test Case Failed"); //MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver,tcname)).build());
 		}
 
 		else if(result.getStatus()==ITestResult.SUCCESS)
 		{
-			logger.pass("Test Case Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.pass("Test Case Passed");// MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver,tcname)).build());
 		}
 
 		//		else if(result.getStatus()==ITestResult.SKIP)
@@ -72,6 +74,8 @@ public class BaseClass {
 		//		}
 
 		report.flush();
+		BrowserFactory.CloseBrowser(driver);
+		
 	}
 
 }
