@@ -5,5 +5,5 @@
     <classes>
       <class name="com.memberdues.testcases.LoginTests"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test --> 
 </suite> <!-- Suite -->

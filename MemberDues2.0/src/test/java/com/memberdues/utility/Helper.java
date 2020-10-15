@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -71,5 +72,6 @@ public class Helper {
 		Date currentDate = new Date();
 		return customFormat.format(currentDate);
 	}
+	
 
 }
