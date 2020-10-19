@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
+<testng-results skipped="0" failed="0" ignored="7" total="10" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="89984" started-at="2020-10-16T00:01:15 IST" finished-at="2020-10-16T00:02:45 IST">
+  <suite name="Suite" duration-ms="83311" started-at="2020-10-16T15:52:18 IST" finished-at="2020-10-16T15:53:42 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="89984" started-at="2020-10-16T00:01:15 IST" finished-at="2020-10-16T00:02:45 IST">
+    <test name="Test" duration-ms="83311" started-at="2020-10-16T15:52:18 IST" finished-at="2020-10-16T15:53:42 IST">
       <class name="com.memberdues.testcases.LoginTests">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setupSuite" is-config="true" duration-ms="888" started-at="2020-10-16T00:01:14 IST" finished-at="2020-10-16T00:01:15 IST">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="setupSuite" is-config="true" duration-ms="873" started-at="2020-10-16T15:52:17 IST" finished-at="2020-10-16T15:52:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setup" is-config="true" duration-ms="10793" started-at="2020-10-16T00:01:15 IST" finished-at="2020-10-16T00:01:26 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="setup" is-config="true" duration-ms="9678" started-at="2020-10-16T15:52:18 IST" finished-at="2020-10-16T15:52:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Login_Error_On_Wrong_Password()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="Login_Error_On_Wrong_Password" duration-ms="18893" started-at="2020-10-16T00:01:26 IST" finished-at="2020-10-16T00:01:45 IST">
+        <test-method status="PASS" signature="Login_Error_On_AppAccess_Restricted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="Login_Error_On_AppAccess_Restricted" duration-ms="18170" started-at="2020-10-16T15:52:28 IST" finished-at="2020-10-16T15:52:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_Error_On_Wrong_Password -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDownMethod" is-config="true" duration-ms="812" started-at="2020-10-16T00:01:45 IST" finished-at="2020-10-16T00:01:46 IST">
+        </test-method> <!-- Login_Error_On_AppAccess_Restricted -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="tearDownMethod" is-config="true" duration-ms="733" started-at="2020-10-16T15:52:46 IST" finished-at="2020-10-16T15:52:47 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_Error_On_Wrong_Password status=SUCCESS method=LoginTests.Login_Error_On_Wrong_Password()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868] output={null}]]]>
+                <![CDATA[[TestResult name=Login_Error_On_AppAccess_Restricted status=SUCCESS method=LoginTests.Login_Error_On_AppAccess_Restricted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setup" is-config="true" duration-ms="12987" started-at="2020-10-16T00:01:46 IST" finished-at="2020-10-16T00:01:59 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="setup" is-config="true" duration-ms="8930" started-at="2020-10-16T15:52:47 IST" finished-at="2020-10-16T15:52:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Login_Error_On_Wrong_Token()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="Login_Error_On_Wrong_Token" duration-ms="18107" started-at="2020-10-16T00:01:59 IST" finished-at="2020-10-16T00:02:17 IST">
+        <test-method status="PASS" signature="Login_Error_On_Member_Deleted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="Login_Error_On_Member_Deleted" duration-ms="18588" started-at="2020-10-16T15:52:56 IST" finished-at="2020-10-16T15:53:14 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_Error_On_Wrong_Token -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDownMethod" is-config="true" duration-ms="368" started-at="2020-10-16T00:02:17 IST" finished-at="2020-10-16T00:02:17 IST">
+        </test-method> <!-- Login_Error_On_Member_Deleted -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="tearDownMethod" is-config="true" duration-ms="343" started-at="2020-10-16T15:53:14 IST" finished-at="2020-10-16T15:53:15 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_Error_On_Wrong_Token status=SUCCESS method=LoginTests.Login_Error_On_Wrong_Token()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868] output={null}]]]>
+                <![CDATA[[TestResult name=Login_Error_On_Member_Deleted status=SUCCESS method=LoginTests.Login_Error_On_Member_Deleted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="setup" is-config="true" duration-ms="8288" started-at="2020-10-16T00:02:17 IST" finished-at="2020-10-16T00:02:26 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="setup" is-config="true" duration-ms="8041" started-at="2020-10-16T15:53:15 IST" finished-at="2020-10-16T15:53:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Login_Error_On_Wrong_Userid()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="Login_Error_On_Wrong_Userid" duration-ms="18531" started-at="2020-10-16T00:02:26 IST" finished-at="2020-10-16T00:02:44 IST">
+        <test-method status="PASS" signature="Login_Error_On_Member_LoginRestricted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="Login_Error_On_Member_LoginRestricted" duration-ms="17634" started-at="2020-10-16T15:53:23 IST" finished-at="2020-10-16T15:53:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_Error_On_Wrong_Userid -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDownMethod" is-config="true" duration-ms="336" started-at="2020-10-16T00:02:44 IST" finished-at="2020-10-16T00:02:44 IST">
+        </test-method> <!-- Login_Error_On_Member_LoginRestricted -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="tearDownMethod" is-config="true" duration-ms="271" started-at="2020-10-16T15:53:40 IST" finished-at="2020-10-16T15:53:41 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_Error_On_Wrong_Userid status=SUCCESS method=LoginTests.Login_Error_On_Wrong_Userid()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868] output={null}]]]>
+                <![CDATA[[TestResult name=Login_Error_On_Member_LoginRestricted status=SUCCESS method=LoginTests.Login_Error_On_Member_LoginRestricted()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.memberdues.testcases.LoginTests@48503868]" name="tearDown" is-config="true" duration-ms="812" started-at="2020-10-16T00:02:44 IST" finished-at="2020-10-16T00:02:45 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.memberdues.testcases.LoginTests@184f6be2]" name="tearDown" is-config="true" duration-ms="864" started-at="2020-10-16T15:53:41 IST" finished-at="2020-10-16T15:53:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
