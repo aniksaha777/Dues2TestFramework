@@ -1,12 +1,19 @@
 package com.memberdues.pages;
 
+import java.io.File;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 import com.memberdues.utility.Helper;
+
+import net.sourceforge.tess4j.ITesseract;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 
 public class LoginPage {
 
@@ -16,19 +23,18 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	@FindBy(xpath = "//div[@class='login-form']//div[2]") WebElement LoginHeader;
+	@FindBy(xpath = "//div[contains(text(),'Member Login')]") WebElement LoginHeader;
 	@FindBy(name = "uname") WebElement username;
 	@FindBy(name = "psw") WebElement pwd;
-	@FindBy(name = "token") WebElement token;
 	@FindBy(xpath = "//*[@id='btnlogin']") WebElement LoginButton;
 	@FindBy(xpath = "//*[@id='userDropdown']") WebElement UserDropdown;
 	@FindBy(xpath = "//span[@onclick='logoutService()']/a") WebElement Logout;
 	@FindBy(xpath ="//*[@id='uname'and @class='form-control loging-error']") WebElement UnameError;
 	@FindBy(xpath ="//*[@id='psw' and @class='form-control loging-error']") WebElement PwError;
 	@FindBy(xpath ="//*[@id='token' and @class='form-control loging-error']") WebElement TokenError;
+	@FindBy(id ="captcha_image") WebElement CaptchaImg;
 
-
-	public void Login_to_Member_Portal(String userid,String pw, String xt) {
+	public void EnterUserDetails(String userid,String pw) {
 
 		try {
 			Thread.sleep(2000);
@@ -40,16 +46,23 @@ public class LoginPage {
 		username.sendKeys(userid);
 		Helper.highlightElement(driver, pwd);
 		pwd.sendKeys(pw);
-		Helper.highlightElement(driver, token);
-		token.sendKeys(xt);
-		Helper.highlightElement(driver, LoginButton);
-		LoginButton.click();
+
+	}
+	
+	public void HandleCaptcha(String tcname) {
+		
+		String captchapath = Helper.captureScreenshot(driver, tcname, CaptchaImg);
+		System.out.println(captchapath);
+		ITesseract image = new Tesseract();
+		String imageText;
 		try {
-		Thread.sleep(1000);
+			imageText = image.doOCR(new File(captchapath));
+			System.out.println(imageText);
+		} catch (TesseractException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		catch (InterruptedException e) {
-		e.printStackTrace();
-		}
+		
 	}
 
 	public void Logout_of_Member_Portal() {
@@ -116,7 +129,7 @@ public class LoginPage {
 		alert.accept();
 		System.out.println("Alert is Handled");
 	}
-	
+
 	public void verifyLoginPageHeader() {
 		try {
 			Thread.sleep(2000);
@@ -127,15 +140,25 @@ public class LoginPage {
 	}
 	public boolean isAlertPresent() 
 	{ 
-	    try 
-	    { 
-	        driver.switchTo().alert(); 
-	        return true; 
-	    }
-	    catch (Exception e) 
-	    { 
-	    	e.getMessage();
-	        return false; 
-	    }
-	} 
+		try 
+		{ 
+			driver.switchTo().alert(); 
+			return true; 
+		}
+		catch (Exception e) 
+		{ 
+			e.getMessage();
+			return false; 
+		}
+	}
+	public void clickLogin() {
+		Helper.highlightElement(driver, LoginButton);
+		LoginButton.click();
+		try {
+			Thread.sleep(1000);
+		}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

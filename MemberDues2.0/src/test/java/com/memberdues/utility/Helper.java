@@ -5,7 +5,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,6 +24,28 @@ public class Helper {
 		file.mkdirs();
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String ScreenshotPath = folderpath+"/"+getCurrentDateTime()+".jpeg";
+		
+		try {
+			FileHandler.copy(src, new File(ScreenshotPath));
+			//System.out.println("Screenshot Captured");
+		} catch (Exception e) {
+			
+			System.out.println("Unable to Capture Screenshot"+e.getMessage());
+
+		}
+		
+		return ScreenshotPath;
+	}
+	
+	
+	public static String captureScreenshot(WebDriver driver,String tcname, WebElement ele)
+	{
+		String Foldername = tcname;
+		String folderpath = System.getProperty("user.dir")+"/Screenshots/TestExecutionDate_"+getCurrentDate()+"/"+Foldername+"/Captcha";
+		File file = new File(folderpath);
+		file.mkdirs();
+		File src = ele.getScreenshotAs(OutputType.FILE);
+		String ScreenshotPath = folderpath+"/"+getCurrentDateTime()+".png";
 		
 		try {
 			FileHandler.copy(src, new File(ScreenshotPath));
